@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Math MCQ – Tests</title>
+<style>
+  body {font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem;}
+  h1 {margin-bottom: .5rem;}
+  .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;}
+  .card {border:1px solid #ddd; border-radius:12px; padding:1rem;}
+  .card h3 {margin:.25rem 0 .5rem;}
+  .muted {color:#666;}
+  a.button {display:inline-block; margin-top:.5rem; padding:.5rem .75rem; border:1px solid #ccc; border-radius:6px; text-decoration:none; background:#fafafa;}
+  a.button:hover {background:#f3f3f3;}
+</style>
+</head>
+<body>
+  <h1>Math MCQ – Choose a Test</h1>
+  <p class="muted">Pick a topic to start. Your answers are graded in the browser.</p>
+  <div id="list" class="grid"></div>
+
+  <script>
+    fetch('tests/manifest.json')
+      .then(r => r.json())
+      .then(items => {
+        const list = document.getElementById('list');
+        items.forEach(t => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h3>${t.title}</h3>
+            <p class="muted">${t.desc || ''}</p>
+            <a class="button" href="quiz.html?test=${encodeURIComponent(t.slug)}">Start</a>
+          `;
+          list.appendChild(card);
+        });
+      })
+      .catch(() => {
+        document.getElementById('list').innerHTML = '<p>Could not load manifest.json.</p>';
+      });
+  </script>
+</body>
+</html>
