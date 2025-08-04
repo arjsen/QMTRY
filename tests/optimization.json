@@ -1,0 +1,212 @@
+[
+  {
+    "id": "opt_1",
+    "question": "Which limit defines the derivative \\(f'(a)\\)?",
+    "choices": [
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}\\)",
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a+h)+f(a)}{h}\\)",
+      "\\(\\displaystyle \\lim_{h\\to 0) }\\frac{f(a)-f(a-h)}{a}\\)",
+      "\\(\\displaystyle \\frac{f(a)}{a}\\)"
+    ],
+    "answer": 0,
+    "explanation": "Definition used throughout the slides: \\(f'(a)=\\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}\\)."
+  },
+  {
+    "id": "opt_2",
+    "question": "Global maximum of \\(f\\) on domain \\(D\\) at \\(x^*\\) means:",
+    "choices": [
+      "\\(f(x)\\le f(x^*)\\) for all \\(x\\in D\\)",
+      "\\(f(x)\\ge f(x^*)\\) for all \\(x\\in D\\)",
+      "\\(f'(x^*)=0\\) and \\(f''(x^*)<0\\)",
+      "There is no larger value near \\(x^*\\) only"
+    ],
+    "answer": 0,
+    "explanation": "Global (absolute) maximum definition in the slides."
+  },
+  {
+    "id": "opt_3",
+    "question": "Necessary condition (interior point): If \\(f\\) has an extremum at interior \\(x^*\\in(a,b)\\), then:",
+    "choices": [
+      "\\(f'(x^*)=0\\)",
+      "\\(f''(x^*)=0\\)",
+      "\\(f'(x^*)\\neq 0\\)",
+      "No condition is implied"
+    ],
+    "answer": 0,
+    "explanation": "First theorem: interior extrema \\(\\Rightarrow f'(x^*)=0\\)."
+  },
+  {
+    "id": "opt_4",
+    "question": "Why does \\(f'(x^*)=0\\) NOT guarantee an extremum?",
+    "choices": [
+      "Because it’s only necessary, not sufficient (e.g., \\(f(x)=x^3\\) at \\(x=0\\))",
+      "Because derivatives do not exist",
+      "Because \\(f''(x^*)\\) is always zero",
+      "Because \\(x^*\\) must be at the boundary"
+    ],
+    "answer": 0,
+    "explanation": "Slide example: \\(f(x)=x^3\\) has \\(f'(0)=0\\) but no extremum at 0."
+  },
+  {
+    "id": "opt_5",
+    "question": "First Derivative Test (visual): Which sign change indicates a local maximum at \\(x^*\\)?",
+    "choices": [
+      "\\(\\begin{array}{c|ccc}\\text{left of }x^*&+&&x^*&-\\end{array}\\)",
+      "\\(\\begin{array}{c|ccc}\\text{left of }x^*&-&&x^*&+\\end{array}\\)",
+      "Always positive on both sides",
+      "Always negative on both sides"
+    ],
+    "answer": 0,
+    "explanation": "Max: \\(f'\\) changes \\(+\\to-\\) at \\(x^*\\)."
+  },
+  {
+    "id": "opt_6",
+    "question": "Second Derivative Test: If \\(f'(x^*)=0\\) and \\(f''(x^*)<0\\), then:",
+    "choices": [
+      "Local maximum at \\(x^*\\)",
+      "Local minimum at \\(x^*\\)",
+      "Inconclusive",
+      "Global maximum at \\(x^*\\)"
+    ],
+    "answer": 0,
+    "explanation": "Concave down at the critical point implies a local maximum."
+  },
+  {
+    "id": "opt_7",
+    "question": "Local vs Global: The derivative tests by themselves:",
+    "choices": [
+      "Do not distinguish local from global extrema",
+      "Always find the global extremum",
+      "Only work for polynomials",
+      "Only work on closed intervals"
+    ],
+    "answer": 0,
+    "explanation": "Slides note that tests don’t tell local vs global automatically."
+  },
+  {
+    "id": "opt_8",
+    "question": "Boundary extrema (visual): On \\([0,50]\\), the function can attain minima at endpoints even if \\(f'(0)\\neq 0\\) and \\(f'(50)\\neq 0\\).",
+    "choices": ["True", "False", "Only if \\(f''=0\\)", "Only if \\(f'>0\\)"],
+    "answer": 0,
+    "explanation": "Slides show minima at boundaries where derivative isn’t zero."
+  },
+  {
+    "id": "opt_9",
+    "question": "Monopoly example: Demand \\(q=50-p\\). Then price as a function of \\(q\\) is:",
+    "choices": ["\\(p=50-q\\)", "\\(p=50+q\\)", "\\(p=q-50\\)", "\\(p=\\dfrac{50}{q}\\)"],
+    "answer": 0,
+    "explanation": "Rearrange demand: \\(p=50-q\\)."
+  },
+  {
+    "id": "opt_10",
+    "question": "Given \\(TC(q)=q^2+q+7\\) and \\(TR(q)=50q-q^2\\), profit is:",
+    "choices": [
+      "\\(\\pi(q)=49q-2q^2-7\\)",
+      "\\(\\pi(q)=50q-2q^2-7\\)",
+      "\\(\\pi(q)=50q-q^2+7\\)",
+      "\\(\\pi(q)=q^2-49q+7\\)"
+    ],
+    "answer": 0,
+    "explanation": "Profit \\(=TR-TC=(50q-q^2)-(q^2+q+7)=49q-2q^2-7\\)."
+  },
+  {
+    "id": "opt_11",
+    "question": "Marginal revenue and cost here are:",
+    "choices": [
+      "\\(MR=50-2q,\\ MC=2q+1\\)",
+      "\\(MR=50-q,\\ MC=2q\\)",
+      "\\(MR=50-2q,\\ MC=q+1\\)",
+      "\\(MR=50,\\ MC=2q+1\\)"
+    ],
+    "answer": 0,
+    "explanation": "Differentiate: \\(TR' = 50-2q\\); \\(TC' = 2q+1\\)."
+  },
+  {
+    "id": "opt_12",
+    "question": "Profit maximization condition (FOC) for the firm is:",
+    "choices": [
+      "\\(MR=MC\\)",
+      "\\(MR=0\\)",
+      "\\(MC=0\\)",
+      "\\(TR=TC\\)"
+    ],
+    "answer": 0,
+    "explanation": "Slides emphasize \\(MR=MC\\) as the first-order condition."
+  },
+  {
+    "id": "opt_13",
+    "question": "Solve \\(50-2q=2q+1\\). The optimal quantity \\(q^*\\) is:",
+    "choices": ["\\(12.25\\)", "\\(25\\)", "\\(24.5\\)", "\\(37.75\\)"],
+    "answer": 0,
+    "explanation": "Gives \\(4q=49\\Rightarrow q^*=12.25\\)."
+  },
+  {
+    "id": "opt_14",
+    "question": "At \\(q^*=12.25\\), the optimal price is:",
+    "choices": ["\\(37.75\\)", "\\(25\\)", "\\(12.25\\)", "\\(49\\)"],
+    "answer": 0,
+    "explanation": "Use \\(p=50-q\\Rightarrow p=37.75\\)."
+  },
+  {
+    "id": "opt_15",
+    "question": "Second derivative of profit: \\(\\pi''(q)\\) equals:",
+    "choices": ["\\(-4\\)", "\\(0\\)", "\\(4\\)", "\\(-2\\)"],
+    "answer": 0,
+    "explanation": "From \\(\\pi(q)=49q-2q^2-7\\), \\(\\pi''(q)=-4\\)<0 confirming a maximum."
+  },
+  {
+    "id": "opt_16",
+    "question": "Price elasticity at \\(q^*=12.25\\), \\(p=37.75\\) for \\(q=50-p\\) is:",
+    "choices": ["About \\(-3.08\\)", "\\(-1\\)", "\\(-0.5\\)", "\\(-5\\)"],
+    "answer": 0,
+    "explanation": "Elasticity \\(\\varepsilon=\\frac{dq}{dp}\\cdot\\frac{p}{q}=-1\\cdot\\frac{37.75}{12.25}\\approx-3.08\\)."
+  },
+  {
+    "id": "opt_17",
+    "question": "MR–elasticity relation (visual): \\(\\displaystyle MR=p(q)\\Big(\\frac{1}{\\varepsilon}+1\\Big)\\). Producing where \\(MR>0\\) implies:",
+    "choices": [
+      "Demand is elastic (\\(\\varepsilon<-1\\))",
+      "Demand is unit elastic (\\(\\varepsilon=-1\\))",
+      "Demand is inelastic (\\(-1<\\varepsilon<0\\))",
+      "No implication"
+    ],
+    "answer": 0,
+    "explanation": "With \\(p(q)>0\\), \\(MR>0\\iff \\frac{1}{\\varepsilon}+1>0\\iff \\varepsilon<-1\\)."
+  },
+  {
+    "id": "opt_18",
+    "question": "Consumer problem: Maximize \\(U(x_1,x_2)=2\\ln x_1+2\\ln x_2\\) s.t. \\(p_1x_1+p_2x_2=M\\). Optimal \\(x_1^*\\) is:",
+    "choices": [
+      "\\(\\dfrac{M}{2p_1}\\)",
+      "\\(\\dfrac{M}{p_1}\\)",
+      "\\(\\dfrac{M}{2p_2}\\)",
+      "\\(\\dfrac{2M}{p_1}\\)"
+    ],
+    "answer": 0,
+    "explanation": "Slides derive \\(x_1^*={M}/{2p_1}\\) and \\(x_2^*={M}/{2p_2}\\)."
+  },
+  {
+    "id": "opt_19",
+    "question": "For the same consumer problem, the SOC at \\(x_1^*\\) is:",
+    "choices": [
+      "Satisfied because \\(\\dfrac{d^2U}{dx_1^2}<0\\)",
+      "Inconclusive because second derivative is zero",
+      "Fails because \\(\\dfrac{d^2U}{dx_1^2}>0\\)",
+      "Not applicable"
+    ],
+    "answer": 0,
+    "explanation": "Slides compute a negative second derivative at the optimum."
+  },
+  {
+    "id": "opt_20",
+    "question": "Sign chart (visual): Which indicates a local minimum at \\(x^*\\)?",
+    "choices": [
+      "\\(\\begin{array}{c|ccc}\\text{left of }x^*&-&&x^*&+\\end{array}\\)",
+      "\\(\\begin{array}{c|ccc}\\text{left of }x^*&+&&x^*&-\\end{array}\\)",
+      "Always negative on both sides",
+      "Always positive on both sides"
+    ],
+    "answer": 0,
+    "explanation": "Min: \\(f'\\) changes \\(-\\to+\\) at \\(x^*\\)."
+  }
+]
