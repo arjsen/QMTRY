@@ -1,0 +1,192 @@
+[
+  {
+    "id": "q1",
+    "question": "Which limit correctly defines the derivative \\(f'(a)\\)?",
+    "choices": [
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}\\)",
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a+h)+f(a)}{h}\\)",
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a)-f(a-h)}{h}\\)",
+      "\\(\\displaystyle \\lim_{h\\to 0}\\frac{f(a)}{h}\\)"
+    ],
+    "answer": 0,
+    "explanation": "By definition, \\(f'(a)=\\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}\\)."
+  },
+  {
+    "id": "q2",
+    "question": "Geometrically, \\(f'(a)\\) equals:",
+    "choices": [
+      "The slope of the tangent line to the curve at \\(x=a\\)",
+      "The slope of a secant line over an interval",
+      "The area under \\(f(x)\\) from 0 to \\(a\\)",
+      "The \\(y\\)-intercept of \\(f(x)\\)"
+    ],
+    "answer": 0,
+    "explanation": "Derivative at a point is the slope of the tangent line there."
+  },
+  {
+    "id": "q3",
+    "question": "Find \\(\\dfrac{d}{dx}x^2\\).",
+    "choices": ["\\(1\\)", "\\(2x\\)", "\\(x\\)", "\\(0\\)"],
+    "answer": 1,
+    "explanation": "Power rule: \\(\\dfrac{d}{dx}x^n=nx^{n-1}\\Rightarrow 2x\\)."
+  },
+  {
+    "id": "q4",
+    "question": "Find \\(\\dfrac{d}{dx}e^x\\).",
+    "choices": ["\\(e^x\\)", "\\(1\\)", "\\(x\\)", "\\(\\ln x\\)"],
+    "answer": 0,
+    "explanation": "The derivative of the natural exponential is itself."
+  },
+  {
+    "id": "q5",
+    "question": "Find \\(\\dfrac{d}{dx}\\ln x\\) for \\(x>0\\).",
+    "choices": ["\\(1/x\\)", "\\(x\\)", "\\(\\ln x\\)", "\\(e^x\\)"],
+    "answer": 0,
+    "explanation": "Derivative of \\(\\ln x\\) is \\(1/x\\)."
+  },
+  {
+    "id": "q6",
+    "question": "Compute \\(\\dfrac{d}{dx}(5x^2)\\).",
+    "choices": ["\\(10x\\)", "\\(5x^2\\)", "\\(2x^5\\)", "\\(5/x^2\\)"],
+    "answer": 0,
+    "explanation": "Constant multiple rule with power rule: \\(5\\cdot 2x=10x\\)."
+  },
+  {
+    "id": "q7",
+    "question": "Compute \\(\\dfrac{d}{dx}[\\ln x + e^x]\\).",
+    "choices": ["\\(\\tfrac{1}{x}+e^x\\)", "\\(\\tfrac{1}{x}\\)", "\\(e^x\\)", "\\(1\\)"],
+    "answer": 0,
+    "explanation": "Sum rule: derivative is the sum of derivatives."
+  },
+  {
+    "id": "q8",
+    "question": "Using the product rule, find \\(\\dfrac{d}{dx}(x^2 e^x)\\).",
+    "choices": [
+      "\\(e^x(2x+x^2)\\)",
+      "\\(2x e^x\\)",
+      "\\(x^2 e^x\\)",
+      "\\(e^x(2x-x^2)\\)"
+    ],
+    "answer": 0,
+    "explanation": "Product rule: \\((x^2)'e^x + x^2(e^x)' = 2x e^x + x^2 e^x = e^x(2x+x^2)\\)."
+  },
+  {
+    "id": "q9",
+    "question": "Using the product rule, find \\(\\dfrac{d}{dx}[\\ln(x)\\,e^x]\\).",
+    "choices": [
+      "\\(e^x\\!\\left(\\tfrac{1}{x}+\\ln x\\right)\\)",
+      "\\(e^x\\!\\left(\\tfrac{1}{x}-\\ln x\\right)\\)",
+      "\\(\\tfrac{1}{x}+\\ln x\\)",
+      "\\(\\ln x\\)"
+    ],
+    "answer": 0,
+    "explanation": "\\((\\ln x)'e^x + \\ln x\\cdot (e^x)' = (1/x)e^x + \\ln x\\,e^x\\)."
+  },
+  {
+    "id": "q10",
+    "question": "Using the quotient rule, find \\(\\dfrac{d}{dx}\\Big(\\dfrac{e^x}{x}\\Big)\\).",
+    "choices": [
+      "\\(\\dfrac{e^x(x-1)}{x^2}\\)",
+      "\\(\\dfrac{e^x(x+1)}{x^2}\\)",
+      "\\(\\dfrac{e^x}{x}\\)",
+      "\\(\\dfrac{e^x}{x^2}\\)"
+    ],
+    "answer": 0,
+    "explanation": "Quotient rule: \\(\\dfrac{(e^x)\\cdot x - e^x\\cdot 1}{x^2}=\\dfrac{e^x(x-1)}{x^2}\\)."
+  },
+  {
+    "id": "q11",
+    "question": "Using the quotient rule, find \\(\\dfrac{d}{dx}\\Big(\\dfrac{\\ln x}{e^x}\\Big)\\).",
+    "choices": [
+      "\\(\\dfrac{\\tfrac{1}{x}-\\ln x}{e^x}\\)",
+      "\\(\\dfrac{\\tfrac{1}{x}+\\ln x}{e^x}\\)",
+      "\\(\\dfrac{\\ln x}{e^x}\\)",
+      "\\(e^x\\!\\left(\\tfrac{1}{x}-\\ln x\\right)\\)"
+    ],
+    "answer": 0,
+    "explanation": "Quotient rule: \\(\\dfrac{(1/x)e^x - \\ln x\\,e^x}{(e^x)^2}=\\dfrac{1/x - \\ln x}{e^x}\\)."
+  },
+  {
+    "id": "q12",
+    "question": "Chain rule: if \\(f(x)=g(h(x))\\), then \\(f'(x)=\\ ?\\)",
+    "choices": [
+      "\\(g'(h(x))\\,h'(x)\\)",
+      "\\(g'(x)\\,h(x)\\)",
+      "\\(g'(x)+h'(x)\\)",
+      "\\(g'(h(x))+h'(x)\\)"
+    ],
+    "answer": 0,
+    "explanation": "Chain rule multiplies the outer derivative (at the inner) by the inner derivative."
+  },
+  {
+    "id": "q13",
+    "question": "Compute \\(\\dfrac{d}{dx}e^{x^2}\\).",
+    "choices": ["\\(2x\\,e^{x^2}\\)", "\\(e^{x^2}\\)", "\\(x\\,e^{x^2}\\)", "\\(2e^x\\)"],
+    "answer": 0,
+    "explanation": "Let \\(u=x^2\\). Then \\(\\dfrac{d}{dx}e^{u}=u' e^{u}=2x e^{x^2}\\)."
+  },
+  {
+    "id": "q14",
+    "question": "Compute \\(\\dfrac{d}{dx}\\ln(3x^2+1)\\).",
+    "choices": [
+      "\\(\\dfrac{6x}{3x^2+1}\\)",
+      "\\(\\dfrac{1}{3x^2+1}\\)",
+      "\\(\\dfrac{6}{3x^2+1}\\)",
+      "\\(6x\\,\\ln(3x^2+1)\\)"
+    ],
+    "answer": 0,
+    "explanation": "Chain rule: \\(\\dfrac{1}{3x^2+1}\\cdot 6x = \\dfrac{6x}{3x^2+1}\\)."
+  },
+  {
+    "id": "q15",
+    "question": "Implicit differentiation: for \\(x^2+y^2=25\\), find \\(\\dfrac{dy}{dx}\\).",
+    "choices": [
+      "\\(-\\dfrac{x}{y}\\)",
+      "\\(-\\dfrac{y}{x}\\)",
+      "\\(2x+2y\\)",
+      "Not defined"
+    ],
+    "answer": 0,
+    "explanation": "Differentiate: \\(2x+2y\\,y'=0\\Rightarrow y'=-x/y\\)."
+  },
+  {
+    "id": "q16",
+    "question": "Total revenue \\(TR(Q)=194Q-2Q^2\\). What is marginal revenue (MR)?",
+    "choices": ["\\(194-4Q\\)", "\\(194-2Q\\)", "\\(194Q\\)", "\\(2Q\\)"],
+    "answer": 0,
+    "explanation": "MR is \\(\\dfrac{dTR}{dQ}=194-4Q\\)."
+  },
+  {
+    "id": "q17",
+    "question": "Using MR, estimate \\(\\Delta TR\\) when output increases from \\(Q=12\\) to \\(Q=13\\).",
+    "choices": ["\\(146\\)", "\\(150\\)", "\\(194\\)", "\\(48\\)"],
+    "answer": 0,
+    "explanation": "With \\(\\Delta Q=1\\), \\(\\Delta TR\\approx MR\\cdot\\Delta Q=(194-4\\cdot 12)\\cdot 1=146\\)."
+  },
+  {
+    "id": "q18",
+    "question": "Cost \\(C(Q)=50+10Q+Q^2\\). What is marginal cost (MC) at \\(Q=12\\)?",
+    "choices": ["\\(34\\)", "\\(22\\)", "\\(10\\)", "\\(12\\)"],
+    "answer": 0,
+    "explanation": "MC is \\(\\dfrac{dC}{dQ}=10+2Q\\). At \\(Q=12\\): \\(10+24=34\\)."
+  },
+  {
+    "id": "q19",
+    "question": "Demand \\(Q(P)=500-5P\\). Price elasticity at \\(P=50\\) equals:",
+    "choices": ["\\(-1\\)", "\\(-0.2\\)", "\\(-5\\)", "\\(1\\)"],
+    "answer": 0,
+    "explanation": "Elasticity \\(\\varepsilon=\\dfrac{dQ}{dP}\\cdot\\dfrac{P}{Q}\\). Here \\(dQ/dP=-5\\), \\(Q=250\\) so \\(\\varepsilon=-5\\cdot 50/250=-1\\)."
+  },
+  {
+    "id": "q20",
+    "question": "Which describes a function that is increasing at a decreasing rate?",
+    "choices": [
+      "\\(f'(x)>0\\) and \\(f''(x)<0\\)",
+      "\\(f'(x)>0\\) and \\(f''(x)>0\\)",
+      "\\(f'(x)<0\\) and \\(f''(x)<0\\)",
+      "\\(f'(x)<0\\) and \\(f''(x)>0\\)"
+    ],
+    "answer": 0,
+    "explanation": "Increasing means \\(f'>0\\); decreasing rate means concave down \\(f''<0\\)."
+  }
+]
