@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ln_1",
+    "question": "Which is the derivative of \\(\\ln x\\) for \\(x>0\\)?",
+    "choices": ["\\(1/x\\)", "\\(x\\)", "\\(\\ln x\\)", "\\(e^x\\)"],
+    "answer": 0,
+    "explanation": "For \\(x>0\\), \\(\\frac{d}{dx}\\ln x=1/x\\)."
+  },
+  {
+    "id": "ln_2",
+    "question": "Find \\(\\dfrac{d}{dx}\\ln(x^2)\\) for \\(x\\neq 0\\).",
+    "choices": ["\\(2/x\\)", "\\(1/(2x)\\)", "\\(1/x^2\\)", "\\(2x\\)"],
+    "answer": 0,
+    "explanation": "Chain rule: \\(u=x^2\\Rightarrow u'/u=2x/x^2=2/x\\)."
+  },
+  {
+    "id": "ln_3",
+    "question": "Compute \\(\\dfrac{d}{dx}\\big(\\dfrac{\\ln x}{x}\\big)\\) for \\(x>0\\).",
+    "choices": ["\\(\\dfrac{1-\\ln x}{x^2}\\)", "\\(\\dfrac{1}{x^2}\\)", "\\(\\dfrac{\\ln x}{x^2}\\)", "\\(\\dfrac{1}{x}\\)"],
+    "answer": 0,
+    "explanation": "Product/quotient rule gives \\((1-\\ln x)/x^2\\)."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "x2_1",
+    "question": "Which is the derivative of \\(x^2\\)?",
+    "choices": ["\\(1\\)", "\\(2x\\)", "\\(x\\)", "\\(x^2\\)"],
+    "answer": 1,
+    "explanation": "Power rule: \\(\\frac{d}{dx}x^n=nx^{n-1}\\)."
+  },
+  {
+    "id": "x2_2",
+    "question": "What is the slope of the tangent to \\(y=x^2\\) at \\(x=3\\)?",
+    "choices": ["\\(3\\)", "\\(6\\)", "\\(9\\)", "\\(2\\)"],
+    "answer": 1,
+    "explanation": "Since \\(\\frac{dy}{dx}=2x\\), slope at 3 is 6."
+  },
+  {
+    "id": "x2_3",
+    "question": "Evaluate \\(\\dfrac{d}{dx}\\,x^2\\) at \\(x=-2\\).",
+    "choices": ["\\(-4\\)", "\\(0\\)", "\\(2\\)", "\\(4\\)"],
+    "answer": 0,
+    "explanation": "Derivative is \\(2x\\); at \\(x=-2\\) it’s \\(-4\\)."
+  }
+]

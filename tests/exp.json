@@ -1,0 +1,23 @@
+[
+  {
+    "id": "exp_1",
+    "question": "Which is the derivative of \\(e^x\\)?",
+    "choices": ["\\(e^x\\)", "\\(1\\)", "\\(x\\)", "\\(\\ln x\\)"],
+    "answer": 0,
+    "explanation": "\\(\\dfrac{d}{dx}e^x=e^x\\)."
+  },
+  {
+    "id": "exp_2",
+    "question": "Find \\(\\dfrac{d}{dx}e^{3x-2}\\).",
+    "choices": ["\\(3e^{3x-2}\\)", "\\(e^{3x-2}\\)", "\\((3x-2)e^{3x-2}\\)", "\\(6e^{3x-2}\\)"],
+    "answer": 0,
+    "explanation": "Chain rule with \\(u=3x-2\\Rightarrow 3e^{u}\\)."
+  },
+  {
+    "id": "exp_3",
+    "question": "Find \\(\\dfrac{d}{dx}\\big(xe^x\\big)\\).",
+    "choices": ["\\(e^x+xe^x\\)", "\\(xe^x\\)", "\\(e^x\\)", "\\((1+x)e^{x^2}\\)"],
+    "answer": 0,
+    "explanation": "Product rule: \\(e^x+xe^x\\)."
+  }
+]
