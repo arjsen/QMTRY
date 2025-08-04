@@ -1,0 +1,5 @@
+[
+  { "slug": "x2",  "title": "Derivatives of x^2", "desc": "Power rule and basics" },
+  { "slug": "ln",  "title": "Derivatives of ln(x)", "desc": "Log rules and chain rule" },
+  { "slug": "exp", "title": "Derivatives of e^x", "desc": "Exponential rules and products" }
+]
