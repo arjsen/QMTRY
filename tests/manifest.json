@@ -3,5 +3,6 @@
   { "slug": "ln",  "title": "Derivatives of ln(x)", "desc": "Log rules and chain rule" },
   { "slug": "exp", "title": "Derivatives of e^x", "desc": "Exponential rules and products" },
   { "slug": "Derivative", "title": "Derivatives", "desc": "Questions on derivatives" },
-  { "slug": "optimization", "title": "Optimization", "desc": "Questions on optimization" }
+  { "slug": "optimization", "title": "Optimization", "desc": "Questions on optimization" },
+  { "slug": "multivariate", "title": "Multivariate Calculus", "desc": "Questions on multivariate calculus" }
 ]
