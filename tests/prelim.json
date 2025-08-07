@@ -4,159 +4,184 @@
     "question": "Which number below is **irrational**?",
     "choices": ["\\(\\dfrac{3}{4}\\)", "\\(-7\\)", "\\(\\sqrt{2}\\)", "\\(0.75\\)"],
     "answer": 2,
-    "explanation": "Numbers that cannot be expressed as a ratio of two integers (e.g. \\(\\sqrt{2}\\)) are irrational. :contentReference[oaicite:0]{index=0}"
+    "explanation": "Numbers that cannot be expressed as a ratio of two integers (e.g. \\(\\sqrt{2}\\)) are irrational."
   },
   {
     "id": "pre_02",
     "question": "The interval \\((\\,a,b]\\) is described as:",
     "choices": ["Closed", "Open", "Half-open (right closed)", "Half-open (left closed)"],
     "answer": 3,
-    "explanation": "Round bracket excludes \\(a\\); square bracket includes \\(b\\) ⇒ half-open left. :contentReference[oaicite:1]{index=1}"
+    "explanation": "Round bracket excludes \\(a\\); square bracket includes \\(b\\); so it is half-open on the left."
   },
   {
     "id": "pre_03",
-    "question": "In a *function*, each element of the domain maps to:",
-    "choices": ["Zero or more range elements", "Exactly one range element", "At least two range elements", "Possibly many domain elements"],
+    "question": "In a function, each element of the domain maps to:",
+    "choices": [
+      "Zero or more range elements",
+      "Exactly one range element",
+      "At least two range elements",
+      "Possibly many domain elements"
+    ],
     "answer": 1,
-    "explanation": "A function is a mapping where every input has **exactly one** output. :contentReference[oaicite:2]{index=2}"
+    "explanation": "A function is defined as a mapping where each input has exactly one output."
   },
   {
     "id": "pre_04",
     "question": "Which mapping type **is NOT** a valid function?",
     "choices": ["One-to-one", "Many-to-one", "One-to-many", "Both one-to-one and many-to-one"],
     "answer": 2,
-    "explanation": "One-to-many breaks the function rule (single input → multiple outputs). :contentReference[oaicite:3]{index=3}"
+    "explanation": "One-to-many violates the function rule because an input would have multiple outputs."
   },
   {
     "id": "pre_05",
     "question": "The **domain** of a function is:",
     "choices": ["All possible outputs", "A subset of the range", "All admissible inputs", "Only positive real numbers"],
     "answer": 2,
-    "explanation": "Domain = set of all inputs for which the function is defined. :contentReference[oaicite:4]{index=4}"
+    "explanation": "The domain is the set of all inputs for which the function is defined."
   },
   {
     "id": "pre_06",
     "question": "In \\(y = mx + c\\), the constant \\(m\\) measures:",
     "choices": ["Y-intercept", "Slope (steepness)", "X-intercept", "Mid-point"],
     "answer": 1,
-    "explanation": "The notes define \\(m\\) as the slope of the line. :contentReference[oaicite:5]{index=5}"
+    "explanation": "The coefficient \\(m\\) is the slope of the straight line."
   },
   {
     "id": "pre_07",
     "question": "The line through \\((1,2)\\) and \\((4,5)\\) has slope:",
     "choices": ["\\(\\tfrac13\\)", "\\(1\\)", "\\(3\\)", "\\(\\tfrac32\\)"],
     "answer": 1,
-    "explanation": "Computed in the example: \\(m = \\dfrac{5-2}{4-1}=1\\). :contentReference[oaicite:6]{index=6}"
+    "explanation": "Slope formula: \\(m = (5-2)/(4-1) = 1\\)."
   },
   {
     "id": "pre_08",
-    "question": "A **vertical** line’s slope is:",
+    "question": "A vertical line’s slope is:",
     "choices": ["Positive", "Zero", "Undefined", "Negative"],
     "answer": 2,
-    "explanation": "Vertical lines have undefined (infinite) slope. :contentReference[oaicite:7]{index=7}"
+    "explanation": "Vertical lines have an undefined (infinite) slope because the run is zero."
   },
   {
     "id": "pre_09",
     "question": "The left-hand limit notation is written as:",
-    "choices": ["\\(\\displaystyle\\lim_{x\\to c^-} f(x)\\)", "\\(\\lim_{x\\to c^+} f(x)\\)", "\\(\\lim_{x\\to c} f(x)\\)", "\\(\\lim_{c\\to x^-} f(x)\\)"],
+    "choices": [
+      "\\(\\displaystyle \\lim_{x\\to c^-} f(x)\\)",
+      "\\(\\lim_{x\\to c^+} f(x)\\)",
+      "\\(\\lim_{x\\to c} f(x)\\)",
+      "\\(\\lim_{c\\to x^-} f(x)\\)"
+    ],
     "answer": 0,
-    "explanation": "Minus superscript (\\(^-\\)) denotes approach from the left. :contentReference[oaicite:8]{index=8}"
+    "explanation": "The superscript “−” indicates approaching from the left of \\(c\\)."
   },
   {
     "id": "pre_10",
-    "question": "For \\(f(x)=3x+2\\), \\(\\lim_{x\\to1}f(x)=\\) ______.",
+    "question": "For \\(f(x)=3x+2\\), \\(\\displaystyle \\lim_{x\\to1} f(x)=\\) ______.",
     "choices": ["3", "5", "4", "6"],
     "answer": 1,
-    "explanation": "Continuous linear function ⇒ substitute \\(x=1\\): 3·1+2 = 5. :contentReference[oaicite:9]{index=9}"
+    "explanation": "Because the function is continuous, substitute \\(x=1\\): \\(3\\cdot1+2=5\\)."
   },
   {
     "id": "pre_11",
-    "question": "The piecewise function \\(h(x)=1\\) if \\(x<0\\), \\(2\\) if \\(x\\ge0\\) is *discontinuous* at \\(x=0\\) because:",
+    "question": "The piecewise function \\(h(x)=1\\) if \\(x<0\\) and \\(h(x)=2\\) if \\(x\\ge0\\) is discontinuous at \\(x=0\\) because:",
     "choices": [
-      "Function undefined at 0",
+      "The function is undefined at 0",
       "Left and right limits differ",
-      "Limit equals function value",
-      "Derivative undefined"
+      "The limit equals the function value",
+      "The derivative is undefined"
     ],
     "answer": 1,
-    "explanation": Left-hand limit 1, right-hand limit 2 → different ⇒ limit does not exist. :contentReference[oaicite:10]{index=10}"
+    "explanation": "The left-hand limit is 1 but the right-hand limit is 2, so the overall limit does not exist."
   },
   {
     "id": "pre_12",
-    "question": "A **removable discontinuity** happens when:",
+    "question": "A **removable discontinuity** occurs when:",
     "choices": [
-      "Function approaches infinity",
+      "The function approaches infinity",
       "Left and right limits differ",
-      "Limit exists but \\(f(c)\\) is missing or unequal",
-      "Function is constant"
+      "The limit exists but \\(f(c)\\) is missing or unequal",
+      "The function is constant"
     ],
     "answer": 2,
-    "explanation": Defined as a “hole” that can be filled by redefining \\(f(c)\\). :contentReference[oaicite:11]{index=11}"
+    "explanation": "A removable discontinuity is a “hole” that can be fixed by redefining \\(f(c)\\) to equal the limit."
   },
   {
     "id": "pre_13",
-    "question": "The Extreme Value Theorem states a continuous function on \\([a,b]\\) will:",
-    "choices": ["Be monotonic", "Have derivative everywhere", "Achieve a max and min on that interval", "Be periodic"],
+    "question": "The Extreme Value Theorem states that a continuous function on \\([a,b]\\) will:",
+    "choices": [
+      "Be monotonic",
+      "Have a derivative everywhere",
+      "Attain a maximum and minimum on that interval",
+      "Be periodic"
+    ],
     "answer": 2,
-    "explanation": Continuous on closed interval ⇒ attains its extrema. :contentReference[oaicite:12]{index=12}"
+    "explanation": "A continuous function on a closed interval must achieve both its global maximum and minimum."
   },
   {
     "id": "pre_14",
-    "question": "For continuity at \\(x=c\\), which condition **is NOT** required?",
-    "choices": ["\\(f(c)\\) defined", "\\(\\lim_{x\\to c}f(x)\\) exists", "\\(\\lim_{x\\to c}f(x)=f(c)\\)", "Derivative exists at \\(c\\)"],
+    "question": "For continuity at \\(x=c\\), which condition is **NOT** required?",
+    "choices": [
+      "\\(f(c)\\) is defined",
+      "\\(\\lim_{x\\to c} f(x)\\) exists",
+      "\\(\\lim_{x\\to c} f(x) = f(c)\\)",
+      "The derivative exists at \\(c\\)"
+    ],
     "answer": 3,
-    "explanation": Continuity doesn’t require differentiability. :contentReference[oaicite:13]{index=13}"
+    "explanation": "Continuity requires the first three conditions; differentiability is not necessary."
   },
   {
     "id": "pre_15",
     "question": "Linearity of limits allows evaluation of \\(\\lim_{x\\to c}[af(x)+bg(x)]\\) as:",
     "choices": [
-      "\\(a\\lim f + b\\lim g\\)",
-      "\\(\\lim f·\\lim g\\)",
+      "\\(a\\,\\lim f + b\\,\\lim g\\)",
+      "\\(\\lim f\\,\\cdot\\,\\lim g\\)",
       "\\(\\dfrac{\\lim f}{\\lim g}\\)",
       "None of the above"
     ],
     "answer": 0,
-    "explanation": Property listed under “Properties of limits”. :contentReference[oaicite:14]{index=14}"
+    "explanation": "The limit of a sum is the sum of the limits, scaled by constants."
   },
   {
     "id": "pre_16",
     "question": "Find the slope of the line through \\((1,2)\\) and \\((3,6)\\).",
-    "choices": ["\\(2\\)", "\\(\\tfrac{4}{2}\\)", "\\(\\tfrac{1}{2}\\)", "\\(\\tfrac{4}{1}\\)"],
-    "answer": 1,
-    "explanation": From exercise: slope \\(=\\dfrac{6-2}{3-1}=2\\). :contentReference[oaicite:15]{index=15}"
+    "choices": ["\\(2\\)", "\\(\\tfrac{4}{2}\\)", "\\(\\tfrac12\\)", "\\(\\tfrac41\\)"],
+    "answer": 0,
+    "explanation": "Slope = rise / run = \\((6-2)/(3-1)=4/2=2\\)."
   },
   {
     "id": "pre_17",
-    "question": "Which set chain is **correctly** ordered from smallest to largest?",
+    "question": "Which set inclusion chain is correct from smallest to largest?",
     "choices": [
-      "\\(\\mathbb N\\subset\\mathbb Z\\subset\\mathbb Q\\subset\\mathbb R\\)",
-      "\\(\\mathbb Z\\subset\\mathbb N\\subset\\mathbb R\\subset\\mathbb Q\\)",
-      "\\(\\mathbb Q\\subset\\mathbb N\\subset\\mathbb Z\\subset\\mathbb R\\)",
-      "\\(\\mathbb R\\subset\\mathbb Q\\subset\\mathbb Z\\subset\\mathbb N\\)"
+      "\\(\\mathbb N \\subset \\mathbb Z \\subset \\mathbb Q \\subset \\mathbb R\\)",
+      "\\(\\mathbb Z \\subset \\mathbb N \\subset \\mathbb R \\subset \\mathbb Q\\)",
+      "\\(\\mathbb Q \\subset \\mathbb N \\subset \\mathbb Z \\subset \\mathbb R\\)",
+      "\\(\\mathbb R \\subset \\mathbb Q \\subset \\mathbb Z \\subset \\mathbb N\\)"
     ],
     "answer": 0,
-    "explanation": Natural ⊂ Integers ⊂ Rationals ⊂ Reals. :contentReference[oaicite:16]{index=16}"
+    "explanation": "Natural ⊂ Integers ⊂ Rationals ⊂ Reals."
   },
   {
     "id": "pre_18",
     "question": "A horizontal line has slope:",
     "choices": ["\\(1\\)", "Undefined", "0", "Depends on intercept"],
     "answer": 2,
-    "explanation": Zero slope (see slope types diagram). :contentReference[oaicite:17]{index=17}"
+    "explanation": "The rise is zero, so slope equals 0."
   },
   {
     "id": "pre_19",
-    "question": "If left-hand and right-hand limits at \\(x=1\\) differ, the overall limit:",
-    "choices": ["Equals the left-hand limit", "Equals the right-hand limit", "Does not exist", "Equals their average"],
+    "question": "If the left-hand and right-hand limits at \\(x=1\\) differ, the overall limit:",
+    "choices": [
+      "Equals the left-hand limit",
+      "Equals the right-hand limit",
+      "Does not exist",
+      "Equals their average"
+    ],
     "answer": 2,
-    "explanation": Example with step function shows limit fails to exist. :contentReference[oaicite:18]{index=18}"
+    "explanation": "A limit exists only when both one-sided limits are equal."
   },
   {
     "id": "pre_20",
     "question": "Which interval below is **closed**?",
     "choices": ["\\([0,1]\\)", "\\((0,1)\\)", "\\([0,1)\\)", "\\((0,1]\\)"],
     "answer": 0,
-    "explanation": Closed intervals include both endpoints (filled circles). :contentReference[oaicite:19]{index=19}"
+    "explanation": "A closed interval includes both endpoints (square brackets)."
   }
 ]
