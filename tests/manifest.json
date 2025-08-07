@@ -4,5 +4,6 @@
   { "slug": "exp", "title": "Derivatives of e^x", "desc": "Exponential rules and products" },
   { "slug": "Derivative", "title": "Derivatives", "desc": "Questions on derivatives" },
   { "slug": "optimization", "title": "Optimization", "desc": "Questions on optimization" },
-  { "slug": "multivariate", "title": "Multivariate Calculus", "desc": "Questions on multivariate calculus" }
+  { "slug": "multivariate", "title": "Multivariate Calculus", "desc": "Questions on multivariate calculus" },
+  { "slug": "prelim", "title": "Preliminary Math", "desc": "Questions on preliminary math" }
 ]
