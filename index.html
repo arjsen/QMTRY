@@ -1,43 +1,141 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Math MCQ – Tests</title>
-<style>
-  body {font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem;}
-  h1 {margin-bottom: .5rem;}
-  .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;}
-  .card {border:1px solid #ddd; border-radius:12px; padding:1rem;}
-  .card h3 {margin:.25rem 0 .5rem;}
-  .muted {color:#666;}
-  a.button {display:inline-block; margin-top:.5rem; padding:.5rem .75rem; border:1px solid #ccc; border-radius:6px; text-decoration:none; background:#fafafa;}
-  a.button:hover {background:#f3f3f3;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QM1B Math MCQ – Choose a Test</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --surface-hover: #f3f4f6;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+    }
+    html,body {margin:0; padding:0; height:100%;}
+    body {
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    header {
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+    .subtitle {color:#6b7280; margin:0;}
+
+    main {flex:1; width:100%; max-width: 1100px; margin: 0 auto; padding: 0 1rem 3rem;}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem 1.25rem 1.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,.05);
+      transition: transform .15s ease, box-shadow .15s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+    .card h3 {
+      margin: 0 0 .5rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height:1.3;
+    }
+    .muted { color:#6b7280; font-size:.95rem; line-height:1.45; }
+
+    .button {
+      align-self: flex-start;
+      margin-top: 1rem;
+      padding: .55rem 1rem;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #fff;
+      font-weight: 500;
+      border-radius: .5rem;
+      text-decoration: none;
+      transition: background .15s ease, box-shadow .15s ease;
+    }
+    .button:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 2px 6px rgba(37,99,235,.25);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --surface: #1f2937;
+        --surface-hover: #374151;
+        --border: #374151;
+        --primary: #3b82f6;
+        --primary-hover: #2563eb;
+      }
+      body {color:#f3f4f6;}
+      .muted {color:#9ca3af;}
+    }
+  </style>
 </head>
 <body>
-  <h1>Math MCQ – Choose a Test</h1>
-  <p class="muted">Pick a topic to start. Your answers are graded in the browser.</p>
-  <div id="list" class="grid"></div>
+  <header>
+    <h1>📚 Math MCQ Library</h1>
+    <p class="subtitle">Pick a topic and test your skills.</p>
+  </header>
+
+  <main>
+    <div id="list" class="grid"></div>
+  </main>
 
   <script>
-    fetch('tests/manifest.json')
-      .then(r => r.json())
+    const list = document.getElementById('list');
+
+    fetch('./tests/manifest.json')
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
       .then(items => {
-        const list = document.getElementById('list');
+        if(!Array.isArray(items) || items.length === 0){
+          throw new Error('manifest.json is empty or invalid');
+        }
         items.forEach(t => {
           const card = document.createElement('div');
           card.className = 'card';
           card.innerHTML = `
-            <h3>${t.title}</h3>
-            <p class="muted">${t.desc || ''}</p>
-            <a class="button" href="quiz.html?test=${encodeURIComponent(t.slug)}">Start</a>
+            <div>
+              <h3>${t.title}</h3>
+              <p class="muted">${t.desc || ''}</p>
+            </div>
+            <a class="button" href="quiz.html?test=${encodeURIComponent(t.slug)}">Start Quiz</a>
           `;
           list.appendChild(card);
         });
       })
-      .catch(() => {
-        document.getElementById('list').innerHTML = '<p>Could not load manifest.json.</p>';
+      .catch(err => {
+        list.innerHTML = `<p class="muted">${err.message === 'HTTP 404' ? 'Could not load tests/manifest.json.' : err.message}</p>`;
+        console.error(err);
       });
   </script>
 </body>
