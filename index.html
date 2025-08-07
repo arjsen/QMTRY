@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Math MCQ – Choose a Test</title>
+  <title>Math MCQ – Sidebar Catalog</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     :root {
       --bg: #f9fafb;
-      --card: #ffffff;
+      --surface: #ffffff;
       --border: #e5e7eb;
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
@@ -19,65 +17,108 @@
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #111827;
-        --card: #1f2937;
+        --surface: #1f2937;
         --border: #374151;
         --primary: #3b82f6;
         --primary-hover: #2563eb;
       }
     }
-    *{box-sizing:border-box;margin:0;padding:0}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
     body {
       font-family: 'Inter', system-ui, Arial, sans-serif;
       background: var(--bg);
       color: #111827;
-      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      transition: grid-template-columns .25s ease;
+    }
+    /* SIDEBAR */
+    #sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1rem 2rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 100;
     }
-    header{position:absolute;top:1rem;text-align:center;width:100%}
-    h1{font-size:2rem;font-weight:700;color:var(--primary)}
-    .subtitle{color:#6b7280;margin-top:.25rem}
+    #brand { font-size: 1.35rem; font-weight: 700; color: var(--primary); display:flex; align-items:center; gap:.5rem; }
+    #toggle { display: none; position: absolute; top: 1rem; right: -1.5rem; background: var(--surface); border:1px solid var(--border); border-radius: 50%; width: 32px; height: 32px; align-items:center; justify-content:center; cursor:pointer; }
+    #toggle span { display:block; width: 14px; height: 2px; background: #6b7280; position:relative; }
+    #toggle span::before, #toggle span::after { content:''; position:absolute; width: 14px; height:2px; background:#6b7280; transition: transform .25s ease; }
+    #toggle span::before { top:-5px; }
+    #toggle span::after { top:5px; }
 
-    /* Swiper overrides */
-    .swiper{width:100%;padding:4rem 0 6rem;}
-    .swiper-slide{width:260px;display:flex;justify-content:center;align-items:center}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:1rem;
-      width:100%;
-      padding:1.25rem 1.25rem 1.75rem;
-      box-shadow:0 2px 4px rgba(0,0,0,.05);
-      transition:box-shadow .2s ease;
-      display:flex;flex-direction:column;justify-content:space-between;min-height:230px;
+    nav { flex:1; overflow-y: auto; }
+    .nav-link {
+      display: block;
+      padding: .55rem .75rem;
+      border-radius: .5rem;
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: .25rem;
+      transition: background .15s ease, color .15s ease;
     }
-    .card:hover{box-shadow:0 6px 14px rgba(0,0,0,.1);}
-    .card h3{font-size:1.125rem;font-weight:600;line-height:1.3;margin-bottom:.5rem}
-    .muted{color:#6b7280;font-size:.95rem;line-height:1.45}
-    .button{align-self:flex-start;margin-top:1.25rem;padding:.55rem 1rem;border:1px solid var(--primary);background:var(--primary);color:#fff;font-weight:500;border-radius:.5rem;text-decoration:none;transition:background .15s ease}
-    .button:hover{background:var(--primary-hover)}
+    .nav-link:hover { background: var(--primary); color:#fff; }
+
+    /* MAIN */
+    main {
+      padding: 2rem 2rem 3rem;
+    }
+    h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: .75rem; }
+    .muted { color:#6b7280; margin-bottom: 2rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem 1.25rem 1.75rem;
+      display:flex; flex-direction:column; justify-content:space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,.05);
+      transition: box-shadow .15s ease;
+    }
+    .card:hover { box-shadow: 0 6px 14px rgba(0,0,0,.08); }
+    .card h3 { font-size:1.125rem; font-weight:600; margin-bottom:.5rem; line-height:1.3; }
+    .card .muted { margin-bottom:1rem; }
+    .button { align-self:flex-start; padding:.55rem 1rem; border:1px solid var(--primary); background: var(--primary); color:#fff; border-radius:.5rem; text-decoration:none; font-weight:500; transition: background .15s ease; }
+    .button:hover { background: var(--primary-hover); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      body { grid-template-columns: 0 1fr; }
+      #sidebar { position: fixed; inset: 0 50% 0 0; transform: translateX(-100%); transition: transform .3s ease; box-shadow: 6px 0 12px rgba(0,0,0,.15); }
+      #sidebar.open { transform: translateX(0); }
+      #toggle { display:flex; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📚 Math MCQ Library</h1>
-    <p class="subtitle">Swipe to pick a topic &nbsp;•&nbsp; Graded instantly in your browser</p>
-  </header>
+  <aside id="sidebar">
+    <div id="brand">📚 Math MCQ</div>
+    <nav id="nav"></nav>
+    <button id="toggle" aria-label="toggle sidebar"><span></span></button>
+  </aside>
 
-  <!-- Swiper container -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper" id="slides"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
+  <main>
+    <h1>Choose a Test</h1>
+    <p class="muted">Select a quiz from the sidebar (or the grid below) to start.</p>
+    <div id="grid" class="grid"></div>
+  </main>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const slidesWrap = document.getElementById('slides');
+    const nav = document.getElementById('nav');
+    const grid = document.getElementById('grid');
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggle');
+
+    toggleBtn?.addEventListener('click', () => sidebar.classList.toggle('open'));
 
     fetch('./tests/manifest.json')
       .then(async res => {
@@ -85,46 +126,31 @@
         return res.json();
       })
       .then(items => {
+        // Build sidebar links
         items.forEach(t => {
-          const slide = document.createElement('div');
-          slide.className = 'swiper-slide';
-          slide.innerHTML = `
-            <div class="card">
-              <div>
-                <h3>${t.title}</h3>
-                <p class="muted">${t.desc || ''}</p>
-              </div>
-              <a class="button" href="quiz.html?test=${encodeURIComponent(t.slug)}">Start Quiz</a>
-            </div>
-          `;
-          slidesWrap.appendChild(slide);
+          const link = document.createElement('a');
+          link.href = `quiz.html?test=${encodeURIComponent(t.slug)}`;
+          link.textContent = t.title;
+          link.className = 'nav-link';
+          nav.appendChild(link);
         });
-        // init Swiper after DOM is ready
-        new Swiper('.mySwiper', {
-          effect: 'coverflow',
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: 'auto',
-          coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 120,
-            modifier: 1,
-            slideShadows: true,
-          },
-          loop: items.length > 3,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
+
+        // Build card grid
+        items.forEach(t => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <div>
+              <h3>${t.title}</h3>
+              <p class="muted">${t.desc || ''}</p>
+            </div>
+            <a class="button" href="quiz.html?test=${encodeURIComponent(t.slug)}">Start Quiz</a>
+          `;
+          grid.appendChild(card);
         });
       })
       .catch(err => {
-        slidesWrap.innerHTML = `<p class="muted" style="padding:2rem;text-align:center;">${err.message}</p>`;
+        grid.innerHTML = `<p class="muted">${err.message}</p>`;
         console.error(err);
       });
   </script>
