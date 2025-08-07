@@ -1,0 +1,182 @@
+[
+  {
+    "id": "mv_1",
+    "question": "For a function \\(f(x,y)\\), the partial derivative \\(f_x\\) is defined as:",
+    "choices": [
+      "The derivative of \\(f\\) with respect to \\(x\\) while holding \\(y\\) constant",
+      "The derivative of \\(f\\) with respect to \\(y\\) while holding \\(x\\) constant",
+      "The total change in \\(f\\) when both \\(x\\) and \\(y\\) vary",
+      "The second derivative of \\(f\\) with respect to \\(x\\)"
+    ],
+    "answer": 0,
+    "explanation": "Partial differentiation treats all other independent variables as constants. :contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "id": "mv_2",
+    "question": "Which notation is **not** used for a partial derivative of \\(f(x,y)\\) with respect to \\(x\\)?",
+    "choices": ["\\(\\partial f/\\partial x\\)", "\\(f_x\\)", "\\(\\partial_x f\\)", "\\(df/dx\\)"],
+    "answer": 3,
+    "explanation": "The slides stress that \\(df/dx\\) is reserved for total derivatives, not partials. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "id": "mv_3",
+    "question": "Given \\(z = x^2 + 3xy + 4y^2 + 3x + 2\\), find \\(\\partial z/\\partial x\\).",
+    "choices": ["\\(2x+3y+3\\)", "\\(3x+8y\\)", "\\(2x+3\\)", "\\(2y+3x\\)"],
+    "answer": 0,
+    "explanation": "Differentiate treating \\(y\\) as constant: \\(2x + 3y + 3\\). :contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "id": "mv_4",
+    "question": "For the same \\(z\\), what is \\(\\partial z/\\partial y\\)?",
+    "choices": ["\\(3x+8y\\)", "\\(2x+3y+3\\)", "\\(4y+3x\\)", "\\(3x+4y\\)"],
+    "answer": 0,
+    "explanation": "Differentiate with respect to \\(y\\): \\(3x + 8y\\). :contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "id": "mv_5",
+    "question": "The total differential of \\(f(x,y)\\) is:",
+    "choices": [
+      "\\(df = f_x\\,dx + f_y\\,dy\\)",
+      "\\(df = f_x+f_y\\)",
+      "\\(df = f_{xx}\\,dx + f_{yy}\\,dy\\)",
+      "\\(df = f_xf_y\\,dxdy\\)"
+    ],
+    "answer": 0,
+    "explanation": "Slides derive \\(df = (\\partial f/\\partial x)dx + (\\partial f/\\partial y)dy\\). :contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "id": "mv_6",
+    "question": "Using the total differential, a small change \\(\\Delta z\\) is approximated by:",
+    "choices": [
+      "\\(\\Delta z \\approx f_x\\,\\Delta x + f_y\\,\\Delta y\\)",
+      "\\(\\Delta z \\approx f_x\\,\\Delta x\\)",
+      "\\(\\Delta z \\approx f_y\\,\\Delta y\\)",
+      "\\(\\Delta z \\approx f_{xy}\\,\\Delta x\\,\\Delta y\\)"
+    ],
+    "answer": 0,
+    "explanation": "Replace differentials with small increments. :contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "id": "mv_7",
+    "question": "For the production function \\(Q=2K+3L+4K^{0.5}L^{0.5}\\), the marginal rate of technical substitution (MRTS) is:",
+    "choices": [
+      "\\(\\displaystyle -\\frac{MPL}{MPK}\\)",
+      "\\(\\displaystyle -\\frac{MPK}{MPL}\\)",
+      "\\(\\displaystyle \\frac{MPK}{MPL}\\)",
+      "\\(MPL + MPK\\)"
+    ],
+    "answer": 0,
+    "explanation": "MRTS is the negative ratio of marginal products. :contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "id": "mv_8",
+    "question": "If \\(MP_K = \\tfrac{10}{3}\\) and \\(MP_L = 6\\), how many **extra units of capital** are needed to replace one unit of labour while keeping \\(Q\\) constant?",
+    "choices": ["1.8", "0.6", "3.3", "10"],
+    "answer": 0,
+    "explanation": "MRTS = \\(-MP_L/MP_K = -6/(10/3) = -1.8\\). Hence 1.8 units of \\(K\\). :contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "id": "mv_9",
+    "question": "A necessary condition for an interior local extremum of \\(f(x,y)\\) is:",
+    "choices": [
+      "\\(f_x = 0\\) and \\(f_y = 0\\)",
+      "\\(f_{xx} = 0\\) and \\(f_{yy} = 0\\)",
+      "\\(f_{xy} = 0\\)",
+      "\\(f_x = f_y = 1\\)"
+    ],
+    "answer": 0,
+    "explanation": "Stationary (critical) point requires gradient zero. :contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "id": "mv_10",
+    "question": "The discriminant used in the second-derivative test for \\(f(x,y)\\) is:",
+    "choices": [
+      "\\(D = f_{xx}f_{yy} - (f_{xy})^2\\)",
+      "\\(D = f_{xx}+f_{yy}\\)",
+      "\\(D = f_{xy}\\)",
+      "\\(D = (f_{xx})^2+(f_{yy})^2\\)"
+    ],
+    "answer": 0,
+    "explanation": "Exactly as defined on the slides. :contentReference[oaicite:9]{index=9}"
+  },
+  {
+    "id": "mv_11",
+    "question": "If \\(D>0\\) and \\(f_{xx}<0\\) at a stationary point, the point is a:",
+    "choices": ["Local maximum", "Local minimum", "Saddle point", "Inconclusive"],
+    "answer": 0,
+    "explanation": "Concave-down in both directions ⇒ local max. :contentReference[oaicite:10]{index=10}"
+  },
+  {
+    "id": "mv_12",
+    "question": "For \\(f(x,y)=1-x^2-y^2\\), the stationary point at \\((0,0)\\) is classified as a:",
+    "choices": ["Local maximum", "Local minimum", "Saddle point", "Global minimum"],
+    "answer": 0,
+    "explanation": "Both second partials negative, discriminant positive → max. :contentReference[oaicite:11]{index=11}"
+  },
+  {
+    "id": "mv_13",
+    "question": "For \\(f(x,y)=x^2+y^2-1\\), the stationary point at \\((0,0)\\) is a:",
+    "choices": ["Local minimum", "Local maximum", "Saddle point", "Inconclusive"],
+    "answer": 0,
+    "explanation": "Both second partials positive, discriminant positive → min. :contentReference[oaicite:12]{index=12}"
+  },
+  {
+    "id": "mv_14",
+    "question": "The function \\(f(x,y)=-x^2+4xy-y^2\\) has a stationary point of type:",
+    "choices": ["Saddle point", "Local maximum", "Local minimum", "None (no stationary point)"],
+    "answer": 0,
+    "explanation": "Discriminant negative (from slides) → saddle. :contentReference[oaicite:13]{index=13}"
+  },
+  {
+    "id": "mv_15",
+    "question": "Which statement correctly expresses the **monopolist’s first-order condition** for profit maximisation in two goods?",
+    "choices": [
+      "\\(MR_1 = MC_1\\) and \\(MR_2 = MC_2\\)",
+      "\\(MR = 0\\)",
+      "\\(TR = TC\\)",
+      "\\(MC_1 = MC_2\\)"
+    ],
+    "answer": 0,
+    "explanation": "Set each partial derivative of profit to zero: \\(MR_i = MC_i\\). :contentReference[oaicite:14]{index=14}"
+  },
+  {
+    "id": "mv_16",
+    "question": "For the profit function \\(\\pi(q_1,q_2)=45q_1-2q_1^2+30q_2-2q_2^2-\\tfrac12q_1q_2\\), solving the FOCs yields the optimal output pair:",
+    "choices": ["\\((20,10)\\)", "\\((10,20)\\)", "\\((25,15)\\)", "\\((15,25)\\)"],
+    "answer": 0,
+    "explanation": "Slides solve the linear system and find \\(q_1=20,q_2=10\\). :contentReference[oaicite:15]{index=15}"
+  },
+  {
+    "id": "mv_17",
+    "question": "At the optimum in Q16, the maximum profit is:",
+    "choices": ["600", "350", "950", "400"],
+    "answer": 0,
+    "explanation": "Revenue 950 minus cost 350 gives 600. :contentReference[oaicite:16]{index=16}"
+  },
+  {
+    "id": "mv_18",
+    "question": "If demand is \\(q = 50 - p\\), price elasticity at \\(p=37.75, q=12.25\\) equals:",
+    "choices": ["\\(-3.08\\)", "\\(-1\\)", "\\(-0.5\\)", "\\(-5\\)"],
+    "answer": 0,
+    "explanation": "Elasticity formula from slides gives \\(-3.08\\). :contentReference[oaicite:17]{index=17}"
+  },
+  {
+    "id": "mv_19",
+    "question": "Which elasticity range ensures **positive marginal revenue** for a monopolist?",
+    "choices": [
+      "Elastic demand (\\(\\varepsilon < -1\\))",
+      "Unit elastic (\\(\\varepsilon = -1\\))",
+      "Inelastic demand (\\(-1<\\varepsilon<0\\))",
+      "Any elasticity; MR is always positive"
+    ],
+    "answer": 0,
+    "explanation": "MR = \\(p(1+1/\\varepsilon)\\) > 0 only if \\(\\varepsilon<-1\\). :contentReference[oaicite:18]{index=18}"
+  },
+  {
+    "id": "mv_20",
+    "question": "If the discriminant \\(D=f_{xx}f_{yy}-(f_{xy})^2\\) is **negative** at a stationary point, the point is a:",
+    "choices": ["Saddle point", "Local minimum", "Local maximum", "Global maximum"],
+    "answer": 0,
+    "explanation": "Negative discriminant ⇒ mixed curvature ⇒ saddle. :contentReference[oaicite:19]{index=19}"
+  }
+]
